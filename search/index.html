@@ -42,8 +42,6 @@
   <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
   
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-  
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
@@ -88,11 +86,11 @@
                                                     
                                                 
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="http://localhost:8080/#/">音乐</a></li>
+                                                        <li><a target="_blank" rel="noopener" href="http://10.7.161.155:8080">音乐</a></li>
                                                     
                                                 
                                                     
-                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/loverlyp/loverlyp.github.io.git">项目链接</a></li>
                                                     
                                                 
                                             </ul>
@@ -131,43 +129,7 @@
             <div class="container">
                 <div id="main" class="row">
                     
-
-        <section class="col-md-8">
-            <section class="col-md-8">
-    <div class="kratos-hentry kratos-post-inner clearfix">
-        <div class="kratos-post-content">
-            <h2 class="title-h2 text-center">搜索</h2>
-            <form class="input-group" onsubmit="return inpSearch();">
-                <input class="form-input input-lg" id="search-input" maxlength="80" name="s" placeholder="有什么想找找看的呢o(*￣▽￣*)ブ" required type="search">
-                <button class="btn btn-primary" type="submit">找一找~</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="alert alert-info" id="kr-search-notice">
-        这里是 小鹏学编程 的搜索引擎~
-    </div>
-
-    <div id="result-posts">
-        <div class="kratos-hentry kratos-post-inner clearfix">
-            <div class="kratos-post-content">
-                <p>搜索多个关键词时请用空格分割，例如「」这样；</p>
-                <p>您也可以使用这些标签碰碰运气哦~</p>
-                <p class="search-demo-tags">
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<script>var searchDataFile = "/search.json";</script>
-<script defer src="/js/local-search.min.js"></script>
-        </section>
-
-                
-            
+                        
 
 <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
     <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
@@ -217,6 +179,12 @@
             
           
         
+          
+          
+            <a class="list-group-item" href="/thoughtsaa/vue/"><i class="fa  fa-book"></i> Vue</a>
+            
+          
+        
       </ul>
   </div>
   </aside>
@@ -224,12 +192,48 @@
             
     </div>
 </section>
-        
+                    
+
+        <section class="col-md-8">
+            <section class="col-md-8">
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <div class="kratos-post-content">
+            <h2 class="title-h2 text-center">搜索</h2>
+            <form class="input-group" onsubmit="return inpSearch();">
+                <input class="form-input input-lg" id="search-input" maxlength="80" name="s" placeholder="有什么想找找看的呢o(*￣▽￣*)ブ" required type="search">
+                <button class="btn btn-primary" type="submit">找一找~</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert alert-info" id="kr-search-notice">
+        这里是 小鹏学编程 的搜索引擎~
+    </div>
+
+    <div id="result-posts">
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <div class="kratos-post-content">
+                <p>搜索多个关键词时请用空格分割，例如「」这样；</p>
+                <p>您也可以使用这些标签碰碰运气哦~</p>
+                <p class="search-demo-tags">
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script>var searchDataFile = "/search.json";</script>
+<script defer src="/js/local-search.min.js"></script>
+        </section>
+
+                
         </div>
     </div>
 </div>
 <footer>
-    <div id="footer"  class="ap-lrc"  >
+    <div id="footer"  >
         <div class="kr-tool text-center">
             <div class="tool">
                 
@@ -275,7 +279,7 @@
                         </div>
                         <div>
                             <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                            
                         </div>
                         <div>
                             
@@ -294,20 +298,12 @@
 <script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
 
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="/js/snow.min.js"></script>
+    </div>
+
 <script async src="/js/candy.min.js"></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="3204190542"
-        order="random"
-        fixed="true"
-    >
-    </meting-js>
-
 
 
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
