@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>vue3项目基本模板 | 小鹏学编程</title>
+  <title>组件进阶 | 小鹏学编程</title>
   <meta name="author" content="雷有鹏" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="main.js1234567891011121314&#x2F;&#x2F;引入vueimport &amp;#123; createApp &amp;#125; from &amp;#x27;vue&amp;#x27;&#x2F;&#x2F;引入app实例import App from &amp;#x27;.&#x2F;App.vue&amp;#x27;&#x2F;&#x2F;引入路由import router from &amp;#x27;.&#x2F;router&amp;#x27;&#x2F;&#x2F;引入vueximport store from">
+  <meta name="description" content="组件通讯介绍​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件的独立封闭性，让其与外界沟通，这个过程就是组件通讯 组件的props基本使用 组件时封闭的，要接受外部数据应该通过props来实现  props">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue3项目基本模板">
-<meta property="og:url" content="http://example.com/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:title" content="组件进阶">
+<meta property="og:url" content="http://example.com/thoughtsaa/%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/index.html">
 <meta property="og:site_name" content="小鹏学编程">
-<meta property="og:description" content="main.js1234567891011121314&#x2F;&#x2F;引入vueimport &amp;#123; createApp &amp;#125; from &amp;#x27;vue&amp;#x27;&#x2F;&#x2F;引入app实例import App from &amp;#x27;.&#x2F;App.vue&amp;#x27;&#x2F;&#x2F;引入路由import router from &amp;#x27;.&#x2F;router&amp;#x27;&#x2F;&#x2F;引入vueximport store from">
+<meta property="og:description" content="组件通讯介绍​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件的独立封闭性，让其与外界沟通，这个过程就是组件通讯 组件的props基本使用 组件时封闭的，要接受外部数据应该通过props来实现  props">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
-<meta property="article:published_time" content="2021-03-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-28T07:43:03.451Z">
+<meta property="article:published_time" content="2021-06-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T11:26:33.087Z">
 <meta property="article:author" content="雷有鹏">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
@@ -161,7 +161,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#main-js"><span class="toc-text">main.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router-js"><span class="toc-text">router.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vant-js"><span class="toc-text">vant.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios-js"><span class="toc-text">axios.js</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF%E4%BB%8B%E7%BB%8D"><span class="toc-text">组件通讯介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84props"><span class="toc-text">组件的props</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">组件通信的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE%E7%BB%99%E5%AD%90%E7%BB%84%E4%BB%B6"><span class="toc-text">父组件传递数据给子组件</span></a></li></ol></li></ol>
     </div>
 </aside>
                 
@@ -229,22 +229,22 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">vue3项目基本模板</h1>
+                <h1 class="kratos-entry-title text-center">组件进阶</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-03-20</li>
+                <li><i class="fa fa-calendar"></i> 2021-06-23</li>
                 <li><i class="fa fa-user"></i> 作者 雷有鹏</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.16K
+                        1305
                     
                     字
                 </li>
                 
-                    <li id="/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/" class="leancloud_visitors" data-flag-title="vue3项目基本模板">
+                    <li id="/thoughtsaa/%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/" class="leancloud_visitors" data-flag-title="组件进阶">
                         <i class="fa fa-eye"></i>
                         <span class="leancloud-visitors-count"> </span> 次阅读
                     </li>
@@ -254,17 +254,40 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1624866183451"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1625138793087"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h2 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入vue</span></span><br><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="comment">//引入app实例</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="comment">//引入路由</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="comment">//引入vuex</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store&#x27;</span></span><br><span class="line"><span class="comment">//引入vant</span></span><br><span class="line"><span class="keyword">import</span> Vant <span class="keyword">from</span> <span class="string">&#x27;./utils/vant&#x27;</span>;</span><br><span class="line"><span class="comment">//引入vant样式</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vant/lib/index.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line">createApp(App).use(Vant).use(store).use(router).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+            <h2 id="组件通讯介绍"><a href="#组件通讯介绍" class="headerlink" title="组件通讯介绍"></a>组件通讯介绍</h2><p>​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件的独立封闭性，让其与外界沟通，这个过程就是<strong>组件通讯</strong></p>
+<h2 id="组件的props"><a href="#组件的props" class="headerlink" title="组件的props"></a>组件的props</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
+<li><p>组件时封闭的，要接受外部数据应该通过props来实现</p>
+</li>
+<li><p><strong>props的作用：接收传递给组件的数据</strong></p>
+</li>
+<li><p>传递数据：给组件标签添加属性</p>
+</li>
+<li><p>接收数据：函数组件通过 <strong>参数 props</strong>接收数据，类组件通过 <strong>this.props</strong>接收数据</p>
+<ul>
+<li><p>函数组件获取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Hello (props) &#123;</span><br><span class="line">console.log(props)</span><br><span class="line">    return (</span><br><span class="line">		&lt;div&gt;接收到数据: &#123;props.name &#125;&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>类组件获取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Hello extends React.component &#123;</span><br><span class="line">render () &#123;</span><br><span class="line">	return (</span><br><span class="line">		&lt;div&gt;接收到的数据: &#123; this.props.name&#125;&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>可以给组件传递任意类型的数据</li>
+<li>props是只读属性，不能对值进行修改</li>
+<li>注意：使用类组件时，如果写了构造函数，应该将props传递给super(),否则，无法在构造函数中获取到props，其他的地方是可以拿到的</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Hello extends React.component &#123;</span><br><span class="line">constructor(props) &#123;</span><br><span class="line">//推荐将props传递给父类构造函数</span><br><span class="line">    super(props)</span><br><span class="line">&#125;</span><br><span class="line">render () &#123;</span><br><span class="line">return &lt;div&gt;接收到的数据: &#123;this.props.age&#125;&lt;/div&gt;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="router-js"><a href="#router-js" class="headerlink" title="router.js"></a>router.js</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createRouter, createWebHashHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="comment">//路由地址</span></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">&#x27;../views/Home.vue&#x27;</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Home&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: Home</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/about&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;About&#x27;</span>,</span><br><span class="line">    <span class="comment">//懒加载引入地址</span></span><br><span class="line">    <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;about&quot; */</span> <span class="string">&#x27;../views/About.vue&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = createRouter(&#123;</span><br><span class="line">  <span class="attr">history</span>: createWebHashHistory(),</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
-
-<h2 id="vant-js"><a href="#vant-js" class="headerlink" title="vant.js"></a>vant.js</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按需引入组件</span></span><br><span class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"><span class="comment">//暴露组件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">install</span>(<span class="params">Vue</span>)</span> &#123;</span><br><span class="line">        Vue.use(Button);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="axios-js"><a href="#axios-js" class="headerlink" title="axios.js"></a>axios.js</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> request = axios.create(&#123;</span><br><span class="line">        <span class="attr">baseURL</span>: <span class="string">&#x27;https://autumnfish.cn&#x27;</span>,</span><br><span class="line">        <span class="attr">timeout</span>: <span class="number">30000</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//添加请求拦截器</span></span><br><span class="line">request.interceptors.request.use(<span class="function"><span class="keyword">function</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// window.console.log(config)</span></span><br><span class="line">    <span class="keyword">if</span> (!config.params) &#123;</span><br><span class="line">        config.params = &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    config.params.t = <span class="built_in">Date</span>.now()</span><br><span class="line">        <span class="comment">//在发送请求之前做某事</span></span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//请求错误时做些事</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 注册响应拦截器</span></span><br><span class="line"><span class="comment">// Add a response interceptor</span></span><br><span class="line">request.interceptors.response.use(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Any status code that lie within the range of 2xx cause this function to trigger</span></span><br><span class="line">    <span class="comment">// Do something with response data</span></span><br><span class="line">    <span class="keyword">return</span> response.data;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Any status codes that falls outside the range of 2xx cause this function to trigger</span></span><br><span class="line">    <span class="comment">// Do something with response error</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> request</span><br></pre></td></tr></table></figure>
+<h2 id="组件通信的方式"><a href="#组件通信的方式" class="headerlink" title="组件通信的方式"></a>组件通信的方式</h2><h3 id="父组件传递数据给子组件"><a href="#父组件传递数据给子组件" class="headerlink" title="父组件传递数据给子组件"></a>父组件传递数据给子组件</h3><ul>
+<li>父组件提供要传递的state数据</li>
+<li>给子组件标签添加属性，值为state中的数据</li>
+<li>子组件中通过props接收父组件中传递的数据</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Parent extends React.Component &#123;</span><br><span class="line">    state = &#123; lastName:&#x27;王&#x27;&#125;</span><br><span class="line">	render () &#123;</span><br><span class="line">	return (</span><br><span class="line">		&lt;div&gt;</span><br><span class="line">传递数据给子组件:&lt;child name=&#123;this.state.lastName&#125; /&gt;</span><br><span class="line">       &lt;/ div&gt;</span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line">function child(props) &#123;</span><br><span class="line">return &lt;div&gt;子组件接收到数据: &#123;props.name&#125;&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -315,7 +338,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/",
+                text: "http://example.com/thoughtsaa/%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -327,9 +350,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/";
-            const title         = "「vue3项目基本模板」";
-            const excerpt       = `main.js1234567891011121314//引入vueimport &#123; createApp &#125; from &#x27;vue&#x27;//引入app实例import App from &#x27;./...`;
+            const hostUrl       = "http://example.com/thoughtsaa/%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/";
+            const title         = "「组件进阶」";
+            const excerpt       = `组件通讯介绍​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -351,7 +374,7 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-06-28</span>
+                <span>最后编辑：2021-07-01</span>
                 </div>
             </div>
         </footer>
@@ -360,13 +383,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" Vuex" href="/thoughtsaa/Vuex/">&lt; 上一篇</a>
+                <a title=" jsx的基本使用" href="/thoughtsaa/jsx的基本使用/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" React组件" href="/thoughtsaa/React组件/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -381,7 +400,7 @@
                 appKey: '49OfALDL7kJonwrPMa3MQvuS',
                 visitor: true,
                 enableQQ: false,
-                path: '/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/'
+                path: '/thoughtsaa/%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/'
             });
         }
         if (typeof Valine == 'undefined') {
