@@ -163,9 +163,6 @@
         
           
           
-        
-          
-          
             <a class="list-group-item" href="/thoughtsaa/jsx%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"><i class="fa  fa-book"></i> jsx的基本使用</a>
             
           
@@ -173,6 +170,12 @@
           
           
             <a class="list-group-item" href="/thoughtsaa/React%E6%A6%82%E8%BF%B0/"><i class="fa  fa-book"></i> React概述</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/thoughtsaa/React%E7%BB%84%E4%BB%B6/"><i class="fa  fa-book"></i> React组件</a>
             
           
         
@@ -189,11 +192,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/thoughtsaa/github/"><i class="fa  fa-book"></i> github及hexo</a>
             
-          
-        
           
             
       </ul>
@@ -207,272 +206,6 @@
 
         <section class="col-md-8">
             
-    
-    
-        <article class="kratos-hentry kratos-entry-border-new clearfix">
-            <div class="kratos-status">
-                
-                    <i class="fa fa-refresh"></i>
-                
-                <div class="kratos-status-inner">
-                    <div class="kratos-status-content">
-                        
-                            <h1 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h1><h2 id="REact组件介绍"><a href="#REact组件介绍" class="headerlink" title="REact组件介绍"></a>REact组件介绍</h2><ul>
-<li>组件是 React的一等公民，使用React就是在用组件</li>
-<li>组件表示页面中的部分功能</li>
-<li>组合多个组件实现完整的页面功能</li>
-<li>特点∶可复用、独立、可组合</li>
-</ul>
-<h2 id="React创建组件的方式"><a href="#React创建组件的方式" class="headerlink" title="React创建组件的方式"></a>React创建组件的方式</h2><h3 id="使用函数创建组件"><a href="#使用函数创建组件" class="headerlink" title="使用函数创建组件"></a>使用函数创建组件</h3><ul>
-<li>函数组件：使用js的函数（或箭头函数）创建的组件</li>
-<li>约定1：函数名词必须以<strong>大写字母开头</strong></li>
-<li>约定2：函数组件<strong>必须有返回值</strong>，表示该组件的结构</li>
-<li>如果返回值为null，表示不渲染任何内容</li>
-<li>渲染函数组件：用函数名作为组件标签名</li>
-<li>组件标签可以是单标签也可以是双标签</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Hello</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> (&lt;div&gt;这是我的第一个函数组件!&lt;ldiv&gt;)</span><br><span class="line">&#125;</span><br><span class="line">//箭头函数创建组件</span><br><span class="line">const Hello = () =&gt; &lt;div&gt;这是我的第一个函数组件&lt;/div&gt;</span><br><span class="line">// 渲染组件</span><br><span class="line">React.render(&lt;Hello/&gt;,root)</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用类创建组件"><a href="#使用类创建组件" class="headerlink" title="使用类创建组件"></a>使用类创建组件</h3><ul>
-<li>类组件：使用es6的class创建组件</li>
-<li>约定1:类名称也必须以<strong>大写字母开头</strong></li>
-<li>约定2∶类组件应该继承<strong>React.Component</strong>父类，从而可以使用父类中提供的方法或属性</li>
-<li>约定3∶类组件必须提供**render()**方法</li>
-<li>约定4 : render()方法必须有<strong>返回值</strong>，表示该组件的结构</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建类组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">component</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="title">render</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>这是我的第一个类组件<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//渲染组件</span></span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">Hello</span>/&gt;</span></span>,<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root &#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-<h3 id="抽离为独立的js文件"><a href="#抽离为独立的js文件" class="headerlink" title="抽离为独立的js文件"></a>抽离为独立的js文件</h3><ol>
-<li><p>创建js文件</p>
-</li>
-<li><p>在js文件导入React</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br></pre></td></tr></table></figure></li>
-<li><p>创建组件（函数或类）</p>
-</li>
-<li><p>在js文件中导出该组件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &lt;hello&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>在index.js中导入组件</p>
-</li>
-<li><p>渲染组件</p>
-</li>
-</ol>
-<h2 id="React事件处理"><a href="#React事件处理" class="headerlink" title="React事件处理"></a>React事件处理</h2><ul>
-<li>React 事件绑定语法与DOM事件语法相似</li>
-<li>语法:**on+事件名称={事件处理程序}**，比如: onClick={() =&gt;{}}</li>
-<li>注意:<strong>React事件采用驼峰命名法</strong>，比如: onMouseEnter、onFocus</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">component</span> </span>&#123;</span><br><span class="line"><span class="comment">//事件处理程序</span></span><br><span class="line">	<span class="function"><span class="title">handleclick</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(单击事件触发了<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">render() &#123;</span></span><br><span class="line"><span class="string">    return (</span></span><br><span class="line"><span class="string">&lt;button onclick=&#123;this.handleclick&#125;&gt;点我，点我&lt;/button&gt;</span></span><br><span class="line"><span class="string">)</span></span><br><span class="line"><span class="string">&#125;&#125;</span></span><br><span class="line"><span class="string">//渲染组件</span></span><br><span class="line"><span class="string">ReactDOM.render(&lt;App /&gt;,document.getElementById(&#x27;</span>root <span class="string">&#x27;))</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><ul>
-<li>可以通过<strong>事件处理程序的参数</strong>获取到事件对象</li>
-<li>React 中的事件对象叫做∶<strong>合成事件</strong>（对象)</li>
-<li>合成事件∶兼容所有浏览器，无需担心跨浏览器兼容性问题</li>
-<li>除兼容所有浏览器外，它还拥有和浏览器原生事件相同的接口，包括 <code>stopPropagation()</code>和 <code>preventDefault()</code></li>
-<li>如果你想获取到原生事件对象，可以通过 <code>nativeEvent</code> 属性来进行获取</li>
-</ul>
-<h2 id="支持的事件"><a href="#支持的事件" class="headerlink" title="支持的事件"></a>支持的事件</h2><ul>
-<li><p>Clipboard Events  剪切板事件</p>
-<ul>
-<li>事件名 ：onCopy onCut onPaste</li>
-<li>属性     ：DOMDataTransfer clipboardData</li>
-</ul>
-</li>
-<li><p>compositionEvent  复合事件</p>
-<ul>
-<li>事件名： onCompositionEnd onCompositionStart onCompositionUpdate</li>
-<li>属性： string data</li>
-</ul>
-</li>
-<li><p>Keyboard Events  键盘事件</p>
-<ul>
-<li>事件名：onKeyDown onKeyPress onKeyUp</li>
-<li>属性： 例如 number keyCode  太多就不一一列举</li>
-</ul>
-</li>
-<li><p>Focus Events  焦点事件  （这些焦点事件在 React DOM 上的所有元素都有效，不只是表单元素）</p>
-<ul>
-<li>事件名： onFocus onBlur</li>
-<li>属性： DOMEventTarget relatedTarget</li>
-</ul>
-</li>
-<li><p>Form Events  表单事件</p>
-<ul>
-<li>事件名： onChange onInput onInvalid onSubmit</li>
-</ul>
-</li>
-<li><p>Mouse Events  鼠标事件</p>
-<ul>
-<li><p>事件名：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit</span><br><span class="line">onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave</span><br><span class="line">onMouseMove onMouseOut onMouseOver onMouseUp</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Pointer Events  指针事件</p>
-<ul>
-<li><p>事件名：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">onPointerDown onPointerMove onPointerUp onPointerCancel onGotPointerCapture</span><br><span class="line">onLostPointerCapture onPointerEnter onPointerLeave onPointerOver onPointerOut</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Selection Events  选择事件</p>
-<ul>
-<li>事件名：onSelect</li>
-</ul>
-</li>
-<li><p>Touch Events  触摸事件</p>
-<ul>
-<li>事件名：onTouchCancel onTouchEnd onTouchMove onTouchStart</li>
-</ul>
-</li>
-<li><p>UI Events  UI 事件</p>
-<ul>
-<li>事件名： onScroll</li>
-</ul>
-</li>
-<li><p>Wheel Events  滚轮事件</p>
-<ul>
-<li><p>事件名：onWheel</p>
-</li>
-<li><p>属性： </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">number deltaMode</span><br><span class="line">number deltaX</span><br><span class="line">number deltaY</span><br><span class="line">number deltaZ</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Media Events  媒体事件</p>
-<ul>
-<li><p>事件名：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted</span><br><span class="line">onEnded onError onLoadedData onLoadedMetadata onLoadStart onPause onPlay</span><br><span class="line">onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend</span><br><span class="line">onTimeUpdate onVolumeChange onWaiting</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Image Events 图像事件</p>
-<ul>
-<li>事件名：onLoad onError</li>
-</ul>
-</li>
-<li><p>Animation Events 动画事件</p>
-<ul>
-<li>事件名：onAnimationStart onAnimationEnd onAnimationIteration</li>
-</ul>
-</li>
-<li><p>Transition Events 过渡事件</p>
-<ul>
-<li>事件名：onTransitionEnd</li>
-</ul>
-</li>
-<li><p>Other Events  其他事件</p>
-<ul>
-<li>事件名： onToggle</li>
-</ul>
-</li>
-</ul>
-<h2 id="有状态组件和无状态组件"><a href="#有状态组件和无状态组件" class="headerlink" title="有状态组件和无状态组件"></a>有状态组件和无状态组件</h2><ul>
-<li>函数组件又叫做<strong>无状态组件</strong>，类组件又叫做<strong>有状态组件</strong></li>
-<li>状态（state）即<strong>数据</strong></li>
-<li>函数组件没有自己的状态，<strong>只负责数据展示</strong>（静）</li>
-<li>类组件有自己的状态，<strong>负责更新UI</strong>，让页面“动”起来</li>
-</ul>
-<h2 id="组件中的state和setState（）"><a href="#组件中的state和setState（）" class="headerlink" title="组件中的state和setState（）"></a>组件中的state和setState（）</h2><h3 id="state的基本使用"><a href="#state的基本使用" class="headerlink" title="state的基本使用"></a>state的基本使用</h3><ul>
-<li>状态（state）即数据，是组件累不<strong>私有</strong>数据，只能在组件内部使用</li>
-<li>state的值是对象，表示一个组件中可以有多个数据</li>
-<li>获取状态：<strong>this.state</strong></li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">component</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">super</span>()</span><br><span class="line">        <span class="comment">//初始化state</span></span><br><span class="line">        <span class="built_in">this</span>.state=&#123;</span><br><span class="line">            <span class="attr">count</span>:<span class="number">0</span> </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>计数器：&#123;this.state.count  &#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">)</span><br><span class="line">&#125;&#125;</span><br><span class="line"><span class="comment">//渲染组件</span></span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>,<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root &#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-<h3 id="setState（）修改状态"><a href="#setState（）修改状态" class="headerlink" title="setState（）修改状态"></a>setState（）修改状态</h3><ul>
-<li>状态是可变的</li>
-<li>语法:this.setState({要修改的数据})</li>
-<li>注意:<strong>不要直接修改state 中的值，这是错误的! ! !</strong></li>
-<li>setState() 作用：1.<strong>修改 state</strong> 2.<strong>更新UI</strong></li>
-<li>思想：数据驱动视图</li>
-</ul>
-<h4 id="示例demo"><a href="#示例demo" class="headerlink" title="示例demo"></a>示例demo</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">export default class extends React.Component &#123;</span><br><span class="line">    // 第二种初始化方式</span><br><span class="line">    state = &#123;</span><br><span class="line">        count:1</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;div&gt;计数器 :&#123;this.state.count&#125;&lt;/div&gt;</span><br><span class="line">                &lt;button onClick=&#123;() =&gt; &#123;</span><br><span class="line">                     this.setState(&#123;</span><br><span class="line">            	 		count: this.state.count+1</span><br><span class="line">           			  &#125;)   </span><br><span class="line">                &#125;&#125;&gt;+1&lt;/button&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
-<li>修改state里面的值我们需要通过 this.setState() 来进行修改</li>
-<li>React底层会有监听，一旦我们调用了setState导致了数据的变化，就会重新调用一次render方法，重新渲染当前组件</li>
-</ul>
-<h4 id="抽取事件处理函数"><a href="#抽取事件处理函数" class="headerlink" title="抽取事件处理函数"></a>抽取事件处理函数</h4><ul>
-<li>JSX 中掺杂过多 JS 逻辑代码，会显得非常混乱</li>
-<li>推荐：将逻辑抽离到单独的方法中，保证 JSX 结构清晰</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//事件处理程序</span></span><br><span class="line"><span class="function"><span class="title">onIncrement</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;事件处理程序中的this: &#x27;</span>,<span class="built_in">this</span>)</span><br><span class="line">    <span class="built_in">this</span>.setstate(&#123;</span><br><span class="line">		<span class="attr">count</span>: <span class="built_in">this</span>.state.count +<span class="number">1</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>当我们把上面代码的事件处理程序抽取出来后，会报错，找不到this</li>
-</ul>
-<h5 id="原因：事件处理程序中-this-的值为-undefined"><a href="#原因：事件处理程序中-this-的值为-undefined" class="headerlink" title="原因：事件处理程序中 this 的值为 undefined"></a>原因：事件处理程序中 this 的值为 undefined</h5><ul>
-<li><p> 希望：this 指向组件实例（render方法中的this即为组件实例）</p>
-</li>
-<li><p>在JSX中我们写的事件处理函数可以找到this，原因在于在JSX中我们利用箭头函数，箭头函数是不会绑定this，所以会向外一层去寻找，外层是render方法，在render方法里面的this刚好指向的是当前实例对象</p>
-</li>
-</ul>
-<h2 id="事件绑定this指向"><a href="#事件绑定this指向" class="headerlink" title="事件绑定this指向"></a>事件绑定this指向</h2><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><ul>
-<li>利用箭头函数自身不绑定this的特点</li>
-</ul>
-<p><img src="D:\study\资料\资料-前端React精品教程\day-01\笔记\images\箭头函数.png"></p>
-<h3 id="利用bind方法（★★★）"><a href="#利用bind方法（★★★）" class="headerlink" title="利用bind方法（★★★）"></a>利用bind方法（★★★）</h3><p>利用原型bind方法是可以更改函数里面this的指向的，所以我们可以在构造中调用bind方法，然后把返回的值赋值给我们的函数即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.Component &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super()</span><br><span class="line">	...</span><br><span class="line">    // 通过bind方法改变了当前函数中this的指向</span><br><span class="line">    this.onIncrement = this.onIncrement.bind(this)</span><br><span class="line">  &#125;</span><br><span class="line">  // 事件处理程序</span><br><span class="line">  onIncrement() &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="class的实例方法（★★★）"><a href="#class的实例方法（★★★）" class="headerlink" title="class的实例方法（★★★）"></a>class的实例方法（★★★）</h3><ul>
-<li>利用箭头函数形式的class实例方法</li>
-<li>注意：该语法是实验性语法，但是，由于babel的存在可以使用</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 事件处理程序</span><br><span class="line">onIncrement = () =&gt; &#123;</span><br><span class="line">  console.log(&#x27;事件处理程序中的this：&#x27;, this)</span><br><span class="line">  this.setState(&#123;</span><br><span class="line">    count: this.state.count + 1</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
-<li>推荐：使用class的实例方法，也是依赖箭头函数不绑定this的原因</li>
-</ul>
-<h2 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h2><h3 id="受控组件（★★★）"><a href="#受控组件（★★★）" class="headerlink" title="受控组件（★★★）"></a>受控组件（★★★）</h3><ul>
-<li>HTML中的表单元素是可输入的，也就是有自己的可变状态</li>
-<li>而React中可变状态通常保存在state中，并且只能通过<code>setState()</code> 方法来修改</li>
-<li>React讲state与表单元素值value绑定在一起，由state的值来控制表单元素的值</li>
-<li>受控组件：其值受到react控制的表单元素</li>
-</ul>
-<h4 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h4><ul>
-<li>在state中添加一个状态，作为表单元素的value值</li>
-<li>给表单元素绑定change事件，将表单元素的值设置为state的值</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.Component &#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        super()</span><br><span class="line">        this.inputChange = this.inputChange.bind(this)</span><br><span class="line">    &#125;</span><br><span class="line">    state = &#123;</span><br><span class="line">        txt : &#x27;&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">    inputChange(e)&#123;</span><br><span class="line">       this.setState(&#123;</span><br><span class="line">           txt: e.target.value</span><br><span class="line">       &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        console.log(this.state);</span><br><span class="line">        </span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &#123;/* 把state的值设置给输入框的value，绑定change事件，这样用户在输入内容的时候调用相应函数，在函数里面把当前设置的值赋值给state，从而达到数据的统一 */&#125;</span><br><span class="line">                &lt;input type=&quot;text&quot; value=&#123;this.state.txt&#125; onChange=&#123;this.inputChange&#125;/&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">ReactDOM.render(&lt;App /&gt;,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h4 id="多表单元素优化"><a href="#多表单元素优化" class="headerlink" title="多表单元素优化"></a>多表单元素优化</h4><ul>
-<li>问题：每个表单元素都有一个单独的事件处理函数，这样太繁琐</li>
-<li>优化：使用一个事件处理程序同时处理多个表单元素</li>
-</ul>
-<h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><ul>
-<li>给表单元素添加name属性（用来区分是哪一个表单），名称与state相同（用来更新数据的）</li>
-<li>根据表单内容来获取对应值</li>
-<li>在change事件处理程序中通过 [name] 来修改对应的state</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">inputChange(e)&#123;</span><br><span class="line">   let target = e.target;</span><br><span class="line">   let value = target.type == &#x27;checkbox&#x27; ? target.checked : target.value;</span><br><span class="line">   this.setState(&#123;</span><br><span class="line">       [e.target.name]: value</span><br><span class="line">   &#125;)</span><br><span class="line">&#125;</span><br><span class="line">&lt;input type=&quot;text&quot; value=&#123;this.state.txt&#125; name=&quot;txt&quot; onChange=&#123;this.inputChange&#125;/&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; value=&#123;this.state.isChecked&#125; name=&quot;isChecked&quot; onChange=&#123;this.inputChange&#125;/&gt;</span><br></pre></td></tr></table></figure>
-
-
-                        
-                    </div>
-                </div>
-            </div>
-            
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a><i class="fa fa-calendar"></i></a><a>2021-06-30</a>
-                        
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    
-                    
-                        <span class="pull-right">
-                            <a class="read-more" href="/undefined/React%E7%BB%84%E4%BB%B6/" title="留言">留言<i class="fa fa-chevron-circle-right"></i></a>
-                        </span>
-                    
-
-                </footer>
-            
-        </article>
-    
-
     
     
         <article class="kratos-hentry clearfix">
@@ -571,6 +304,64 @@ jsx不是标准的ECMAScript语法，它是ECMAScript的语法扩展
                     </span>
                     <span class="pull-right">
                         <a class="read-more" href="/thoughtsaa/React%E6%A6%82%E8%BF%B0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                    </span>
+                </footer>
+            </div>
+        </article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix">
+            <div class="kratos-entry-border-new clearfix">
+                
+                <div class="kratos-entry-thumb-new">
+                    <a href="/thoughtsaa/React%E7%BB%84%E4%BB%B6/">
+                        
+                            <img class="kratos-entry-thumb-new-img">
+                        
+                    </a>
+                </div>
+                <div class="kratos-post-inner-new">
+                    <header class="kratos-entry-header-new">
+                            
+                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/React%E7%BB%84%E4%BB%B6/">React组件</a>
+                    </header>
+                    <div class="kratos-entry-content-new">
+                        <p>
+                            
+                                REact组件介绍
+组件是 React的一等公民，使用React就是在用组件
+组件表示页面中的部分功能
+组合多个组件实现完整的页面功能
+特点∶可复用、独立、可组合
+
+React创建组件的方式使用函数创建组件
+函数组件：使用js的函数（...
+                            
+                        </p>
+                    </div>
+                </div>
+                <footer class="kratos-post-meta-new">
+                    <span class="pull-left">
+                        <a>
+                            <i class="fa fa-calendar"></i>
+                            2021-05-06
+                        </a>
+                        <a>
+                            
+                        </a>
+                        
+                            <!-- 当前仅支持valine/waline自带的统计功能 -->
+                            
+                        
+                        
+                            <!-- 当前仅支持waline自带的统计功能 -->
+                            
+                        
+                    </span>
+                    <span class="pull-right">
+                        <a class="read-more" href="/thoughtsaa/React%E7%BB%84%E4%BB%B6/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                     </span>
                 </footer>
             </div>
