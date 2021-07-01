@@ -15,12 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta property="og:type" content="website">
+  <meta name="description" content="React组件REact组件介绍 组件是 React的一等公民，使用React就是在用组件 组件表示页面中的部分功能 组合多个组件实现完整的页面功能 特点∶可复用、独立、可组合  React创建组件的方式使用函数创建组件 函数组件：使用js的函数（或箭头函数）创建的组件 约定1：函数名词必须以大写字母开头 约定2：函数组件必须有返回值，表示该组件的结构 如果返回值为null，表示不渲染任何内容 渲">
+<meta property="og:type" content="article">
 <meta property="og:title" content="小鹏学编程">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/undefined/React%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="小鹏学编程">
+<meta property="og:description" content="React组件REact组件介绍 组件是 React的一等公民，使用React就是在用组件 组件表示页面中的部分功能 组合多个组件实现完整的页面功能 特点∶可复用、独立、可组合  React创建组件的方式使用函数创建组件 函数组件：使用js的函数（或箭头函数）创建的组件 约定1：函数名词必须以大写字母开头 约定2：函数组件必须有返回值，表示该组件的结构 如果返回值为null，表示不渲染任何内容 渲">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
+<meta property="article:published_time" content="2021-06-30T02:31:07.303Z">
+<meta property="article:modified_time" content="2021-06-30T11:26:12.143Z">
 <meta property="article:author" content="雷有鹏">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
@@ -134,8 +138,6 @@
 <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
     <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
     
-        <div class="sticky-area">
-    
     
                 <aside id="krw-about" class="widget widget-kratos-about clearfix">
     <div class="photo-background"></div>
@@ -149,6 +151,8 @@
     </div>
 </aside>
             
+                    <div class="sticky-area">
+                
                 
 
             
@@ -206,18 +210,32 @@
                     
 
         <section class="col-md-8">
+            <article>
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
             
-    
-    
-        <article class="kratos-hentry kratos-entry-border-new clearfix">
-            <div class="kratos-status">
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2021-06-30</li>
+                <li><i class="fa fa-user"></i> 作者 雷有鹏</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~7.32K
+                    
+                    字
+                </li>
                 
-                    <i class="fa fa-refresh"></i>
-                
-                <div class="kratos-status-inner">
-                    <div class="kratos-status-content">
-                        
-                            <h1 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h1><h2 id="REact组件介绍"><a href="#REact组件介绍" class="headerlink" title="REact组件介绍"></a>REact组件介绍</h2><ul>
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                本文最后编辑于 <time datetime="1625052372143"></time> 前，其中的内容可能需要更新。
+            </div>
+            
+            <hr />
+            <h1 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h1><h2 id="REact组件介绍"><a href="#REact组件介绍" class="headerlink" title="REact组件介绍"></a>REact组件介绍</h2><ul>
 <li>组件是 React的一等公民，使用React就是在用组件</li>
 <li>组件表示页面中的部分功能</li>
 <li>组合多个组件实现完整的页面功能</li>
@@ -443,362 +461,114 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">inputChange(e)&#123;</span><br><span class="line">   let target = e.target;</span><br><span class="line">   let value = target.type == &#x27;checkbox&#x27; ? target.checked : target.value;</span><br><span class="line">   this.setState(&#123;</span><br><span class="line">       [e.target.name]: value</span><br><span class="line">   &#125;)</span><br><span class="line">&#125;</span><br><span class="line">&lt;input type=&quot;text&quot; value=&#123;this.state.txt&#125; name=&quot;txt&quot; onChange=&#123;this.inputChange&#125;/&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; value=&#123;this.state.isChecked&#125; name=&quot;isChecked&quot; onChange=&#123;this.inputChange&#125;/&gt;</span><br></pre></td></tr></table></figure>
 
 
-                        
-                    </div>
-                </div>
-            </div>
-            
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a><i class="fa fa-calendar"></i></a><a>2021-06-30</a>
-                        
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    
-                    
-                        <span class="pull-right">
-                            <a class="read-more" href="/undefined/React%E7%BB%84%E4%BB%B6/" title="留言">留言<i class="fa fa-chevron-circle-right"></i></a>
-                        </span>
-                    
-
-                </footer>
-            
-        </article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
-                
-                <div class="kratos-entry-thumb-new">
-                    <a href="/thoughtsaa/jsx%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                        
-                            <img class="kratos-entry-thumb-new-img">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            
-                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/jsx%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">jsx的基本使用</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                jsx简介jsx是javascript XML的简写,表示在javascript代码中写XML（HTML）格式的代码
-jsx不是标准的ECMAScript语法，它是ECMAScript的语法扩展
-需要使用babel编译处理后才可以在浏...
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-05-11
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/thoughtsaa/jsx%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
-            </div>
-        </article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
-                
-                <div class="kratos-entry-thumb-new">
-                    <a href="/thoughtsaa/React%E6%A6%82%E8%BF%B0/">
-                        
-                            <img class="kratos-entry-thumb-new-img">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            
-                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/React%E6%A6%82%E8%BF%B0/">React概述</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                React概述​    React是一个用于React是一个用于构建用户界面的JavaScript库。​    用户界面:HTML页面(前端)​    React主要用来写HTML页面,或构建Web应用​    如果从MVC的角度来看...
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-05-06
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/thoughtsaa/React%E6%A6%82%E8%BF%B0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
-            </div>
-        </article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
-                
-                <div class="kratos-entry-thumb-new">
-                    <a href="/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/">
-                        
-                            <img class="kratos-entry-thumb-new-img">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            
-                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/">vue3项目基本模板</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                main.js1234567891011121314//引入vueimport &#123; createApp &#125; from &#x27;vue&#x27;//引入app实例import App from &#x27;./...
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-03-20
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/thoughtsaa/vue3%E9%A1%B9%E7%9B%AE%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
-            </div>
-        </article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
-                
-                <div class="kratos-entry-thumb-new">
-                    <a href="/thoughtsaa/Vuex/">
-                        
-                            <img class="kratos-entry-thumb-new-img">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            
-                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/Vuex/">Vuex</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                概述Vuex是什么​    vuex是实现组件全局状态（数据）管理的一种机制，可以方便的实现组件之间数据的共享
-使用vuex统一管理的好处
-​    能够在vuex中集中管理共享的数据，易于开发和后期维护
-​    能够高效地实现组件...
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-02-23
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/thoughtsaa/Vuex/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
-            </div>
-        </article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
-                
-                <div class="kratos-entry-thumb-new">
-                    <a href="/thoughtsaa/github/">
-                        
-                            <img class="kratos-entry-thumb-new-img">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            
-                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/github/">github及hexo</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                github..或在命令行上创建一个新的存储库
-12345echo &quot;#loverlyp.github.io&quot; &gt;&gt;READMIE . mdgit initgit add README.mdgit co...
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-02-11
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/thoughtsaa/github/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
-            </div>
-        </article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix">
-            <div class="kratos-entry-border-new clearfix">
-                
-                <div class="kratos-entry-thumb-new">
-                    <a href="/thoughtsaa/vue/">
-                        
-                            <img class="kratos-entry-thumb-new-img">
-                        
-                    </a>
-                </div>
-                <div class="kratos-post-inner-new">
-                    <header class="kratos-entry-header-new">
-                            
-                        <h2 class="kratos-entry-title-new"><a href="/thoughtsaa/vue/">Vue</a>
-                    </header>
-                    <div class="kratos-entry-content-new">
-                        <p>
-                            
-                                MVVM 架构
-
-M - Model，模型、数据
-V - View，视图
-VM - ViewModel，关联 Model 与 View，实现双向数据绑定，View 中的变化能够引起 Model 自动变化，Model 的变化也能引起 V...
-                            
-                        </p>
-                    </div>
-                </div>
-                <footer class="kratos-post-meta-new">
-                    <span class="pull-left">
-                        <a>
-                            <i class="fa fa-calendar"></i>
-                            2021-02-11
-                        </a>
-                        <a>
-                            
-                        </a>
-                        
-                            <!-- 当前仅支持valine/waline自带的统计功能 -->
-                            
-                        
-                        
-                            <!-- 当前仅支持waline自带的统计功能 -->
-                            
-                        
-                    </span>
-                    <span class="pull-right">
-                        <a class="read-more" href="/thoughtsaa/vue/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                    </span>
-                </footer>
-            </div>
-        </article>
-    
-
-
-
-
-
-    <div class="hidden">
-        <!-- 加载文章阅读对应的统计功能，评论自带的那种 -->
+        </div>
         
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
     </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://example.com/undefined/React%E7%BB%84%E4%BB%B6/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://example.com/undefined/React%E7%BB%84%E4%BB%B6/";
+            const title         = "「」";
+            const excerpt       = `React组件REact组件介绍
+组件是 React的一等公民，使用React就是在用组件
+组件表示页面中的部分功能
+组合多个组件实现完整的页面功能
+特点∶可复用、独立、可组合
 
-
+React创建组件的方式使用函数创建组件
+函数组件：使...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    
+                </div>
+                <div class="pull-date">
+                <span>最后编辑：2021-06-30</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" jsx的基本使用" href="/thoughtsaa/jsx的基本使用/">&lt; 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+</article>
         </section>
 
                 
