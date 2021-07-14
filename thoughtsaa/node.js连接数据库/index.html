@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>React组件进阶 | 小鹏学编程</title>
+  <title>node.js连接数据库 | 小鹏学编程</title>
   <meta name="author" content="雷有鹏" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="组件通讯介绍​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件的独立封闭性，让其与外界沟通，这个过程就是组件通讯 组件的props基本使用 组件时封闭的，要接受外部数据应该通过props来实现  props">
+  <meta name="description" content="Express 应用程序生成器你可以通过 npx （包含在 Node.js 8.2.0 及更高版本中）命令来运行 Express 应用程序生成器。 1npx express-generator  然后安装所有依赖包： 1npm install  安装mysql数据库 1npm install mysql  改写入口 12345678910111213141516171819202122232425">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React组件进阶">
-<meta property="og:url" content="http://example.com/thoughtsaa/React%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/index.html">
+<meta property="og:title" content="node.js连接数据库">
+<meta property="og:url" content="http://example.com/thoughtsaa/node.js%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
 <meta property="og:site_name" content="小鹏学编程">
-<meta property="og:description" content="组件通讯介绍​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件的独立封闭性，让其与外界沟通，这个过程就是组件通讯 组件的props基本使用 组件时封闭的，要接受外部数据应该通过props来实现  props">
+<meta property="og:description" content="Express 应用程序生成器你可以通过 npx （包含在 Node.js 8.2.0 及更高版本中）命令来运行 Express 应用程序生成器。 1npx express-generator  然后安装所有依赖包： 1npm install  安装mysql数据库 1npm install mysql  改写入口 12345678910111213141516171819202122232425">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/null">
-<meta property="article:published_time" content="2021-06-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-07-13T02:46:04.967Z">
+<meta property="article:published_time" content="2021-05-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-14T14:04:47.945Z">
 <meta property="article:author" content="雷有鹏">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/null">
@@ -161,7 +161,7 @@
         <span class="toc-progress-bar"></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF%E4%BB%8B%E7%BB%8D"><span class="toc-text">组件通讯介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84props"><span class="toc-text">组件的props</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">组件通信的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE%E7%BB%99%E5%AD%90%E7%BB%84%E4%BB%B6"><span class="toc-text">父组件传递数据给子组件</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Express-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-text">Express 应用程序生成器</span></a></li></ol>
     </div>
 </aside>
                 
@@ -239,17 +239,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">React组件进阶</h1>
+                <h1 class="kratos-entry-title text-center">node.js连接数据库</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-06-23</li>
+                <li><i class="fa fa-calendar"></i> 2021-05-06</li>
                 <li><i class="fa fa-user"></i> 作者 雷有鹏</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        1305
+                        ~2.35K
                     
                     字
                 </li>
@@ -258,40 +258,29 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1626144364967"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1626271487945"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
-            <h2 id="组件通讯介绍"><a href="#组件通讯介绍" class="headerlink" title="组件通讯介绍"></a>组件通讯介绍</h2><p>​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这些功能，就需要打破组件的独立封闭性，让其与外界沟通，这个过程就是<strong>组件通讯</strong></p>
-<h2 id="组件的props"><a href="#组件的props" class="headerlink" title="组件的props"></a>组件的props</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
-<li><p>组件时封闭的，要接受外部数据应该通过props来实现</p>
-</li>
-<li><p><strong>props的作用：接收传递给组件的数据</strong></p>
-</li>
-<li><p>传递数据：给组件标签添加属性</p>
-</li>
-<li><p>接收数据：函数组件通过 <strong>参数 props</strong>接收数据，类组件通过 <strong>this.props</strong>接收数据</p>
-<ul>
-<li><p>函数组件获取</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Hello (props) &#123;</span><br><span class="line">console.log(props)</span><br><span class="line">    return (</span><br><span class="line">		&lt;div&gt;接收到数据: &#123;props.name &#125;&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>类组件获取</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Hello extends React.component &#123;</span><br><span class="line">render () &#123;</span><br><span class="line">	return (</span><br><span class="line">		&lt;div&gt;接收到的数据: &#123; this.props.name&#125;&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>可以给组件传递任意类型的数据</li>
-<li>props是只读属性，不能对值进行修改</li>
-<li>注意：使用类组件时，如果写了构造函数，应该将props传递给super(),否则，无法在构造函数中获取到props，其他的地方是可以拿到的</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Hello extends React.component &#123;</span><br><span class="line">constructor(props) &#123;</span><br><span class="line">//推荐将props传递给父类构造函数</span><br><span class="line">    super(props)</span><br><span class="line">&#125;</span><br><span class="line">render () &#123;</span><br><span class="line">return &lt;div&gt;接收到的数据: &#123;this.props.age&#125;&lt;/div&gt;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+            <h2 id="Express-应用程序生成器"><a href="#Express-应用程序生成器" class="headerlink" title="Express 应用程序生成器"></a>Express 应用程序生成器</h2><p>你可以通过 <code>npx</code> （包含在 Node.js 8.2.0 及更高版本中）命令来运行 Express 应用程序生成器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx express-generator</span><br></pre></td></tr></table></figure>
 
-<h2 id="组件通信的方式"><a href="#组件通信的方式" class="headerlink" title="组件通信的方式"></a>组件通信的方式</h2><h3 id="父组件传递数据给子组件"><a href="#父组件传递数据给子组件" class="headerlink" title="父组件传递数据给子组件"></a>父组件传递数据给子组件</h3><ul>
-<li>父组件提供要传递的state数据</li>
-<li>给子组件标签添加属性，值为state中的数据</li>
-<li>子组件中通过props接收父组件中传递的数据</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Parent extends React.Component &#123;</span><br><span class="line">    state = &#123; lastName:&#x27;王&#x27;&#125;</span><br><span class="line">	render () &#123;</span><br><span class="line">	return (</span><br><span class="line">		&lt;div&gt;</span><br><span class="line">传递数据给子组件:&lt;child name=&#123;this.state.lastName&#125; /&gt;</span><br><span class="line">       &lt;/ div&gt;</span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line">function child(props) &#123;</span><br><span class="line">return &lt;div&gt;子组件接收到数据: &#123;props.name&#125;&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后安装所有依赖包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>安装mysql数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mysql</span><br></pre></td></tr></table></figure>
+
+<p>改写入口</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line"><span class="keyword">var</span> createError = <span class="built_in">require</span>(<span class="string">&#x27;http-errors&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> cookieParser = <span class="built_in">require</span>(<span class="string">&#x27;cookie-parser&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> logger = <span class="built_in">require</span>(<span class="string">&#x27;morgan&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> indexRouter = <span class="built_in">require</span>(<span class="string">&#x27;./routes/index&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> usersRouter = <span class="built_in">require</span>(<span class="string">&#x27;./routes/users&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改写入口</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> server = http.createServer(app);</span><br><span class="line"></span><br><span class="line">app.use(express.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line">app.use(cookieParser());</span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)));</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">&#x27;/&#x27;</span>, indexRouter);</span><br><span class="line">app.use(<span class="string">&#x27;/users&#x27;</span>, usersRouter);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">server.listen(<span class="string">&#x27;3000&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>创建utlis目录</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//db.js</span></span><br><span class="line"><span class="keyword">const</span> mysql=<span class="built_in">require</span>(<span class="string">&quot;mysql&quot;</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    <span class="comment">// 数据库配置</span></span><br><span class="line">    <span class="attr">db</span>:&#123;</span><br><span class="line">        <span class="attr">host</span>: <span class="string">&#x27;数据库地址&#x27;</span>,</span><br><span class="line">        <span class="attr">user</span>: <span class="string">&#x27;用户名&#x27;</span>,</span><br><span class="line">        <span class="attr">password</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">        <span class="attr">port</span>: 端口,</span><br><span class="line">        <span class="attr">database</span>: <span class="string">&#x27;表名&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 连接池</span></span><br><span class="line">    <span class="attr">sqlConnect</span>:<span class="function"><span class="keyword">function</span>(<span class="params">sql,sqlArr,callBack</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> pool = mysql.createPool(<span class="built_in">this</span>.db)</span><br><span class="line">        pool.getConnection(<span class="function">(<span class="params">err,conn</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;1234&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&quot;连接失败&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            conn.query(sql,sqlArr,callBack);</span><br><span class="line">            conn.release();</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cateController.js</span></span><br><span class="line"><span class="keyword">var</span> db = <span class="built_in">require</span>(<span class="string">&#x27;./db&#x27;</span>)</span><br><span class="line"><span class="comment">// 获取分类</span></span><br><span class="line">getCate=<span class="function">(<span class="params">err,res</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sql = <span class="string">&#x27;select * from mysql&#x27;</span></span><br><span class="line">    <span class="keyword">var</span> sqlAll = []</span><br><span class="line">    <span class="keyword">var</span> callBack = <span class="function">(<span class="params">err,data</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(err)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;连接出错了&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            res.send(&#123;</span><br><span class="line">                <span class="string">&#x27;list&#x27;</span>:data</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    db.sqlConnect(sql,sqlAll,callBack)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports= &#123;</span><br><span class="line">    getCate</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>路由调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> cate = <span class="built_in">require</span>(<span class="string">&#x27;../utils/cateController&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* GET home page. */</span></span><br><span class="line">router.get(<span class="string">&#x27;/api&#x27;</span>, cate.getCate);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -342,7 +331,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://example.com/thoughtsaa/React%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/",
+                text: "http://example.com/thoughtsaa/node.js%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -354,9 +343,13 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://example.com/thoughtsaa/React%E7%BB%84%E4%BB%B6%E8%BF%9B%E9%98%B6/";
-            const title         = "「React组件进阶」";
-            const excerpt       = `组件通讯介绍​        组件是独立且封闭的单元，默认情况下，只能使用组件自己的数据。在组件化过程中，我们将一个完整的功能拆分成多个组件，以更好的完成整个应用的功能。而在这个过程中，多个组件之间不可避免的要共享某些数据。为了实现这...`;
+            const hostUrl       = "http://example.com/thoughtsaa/node.js%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/";
+            const title         = "「node.js连接数据库」";
+            const excerpt       = `Express 应用程序生成器你可以通过 npx （包含在 Node.js 8.2.0 及更高版本中）命令来运行 Express 应用程序生成器。
+1npx express-generator
+
+然后安装所有依赖包：
+1npm ins...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -378,8 +371,8 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2021-06-23</span>
-                <!-- <span>最后编辑：2021-07-13</span> -->
+                <span>最后编辑：2021-05-06</span>
+                <!-- <span>最后编辑：2021-07-14</span> -->
                 </div>
             </div>
         </footer>
@@ -388,9 +381,13 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" jsx的基本使用" href="/thoughtsaa/jsx的基本使用/">&lt; 上一篇</a>
+                <a title=" vue3项目基本模板" href="/thoughtsaa/vue3项目基本模板/">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" React组件" href="/thoughtsaa/React组件/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
