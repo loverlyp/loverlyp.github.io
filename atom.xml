@@ -6,7 +6,7 @@
   <link href="https://krt.moe/atom.xml" rel="self"/>
   
   <link href="https://krt.moe/"/>
-  <updated>2025-07-08T02:58:33.446Z</updated>
+  <updated>2025-07-08T03:02:49.882Z</updated>
   <id>https://krt.moe/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>git常用命令</title>
     <link href="https://krt.moe/posts/git%E5%91%BD%E4%BB%A4/"/>
     <id>https://krt.moe/posts/git%E5%91%BD%E4%BB%A4/</id>
-    <published>2018-05-06T09:03:12.000Z</published>
-    <updated>2025-07-08T02:58:33.446Z</updated>
+    <published>2025-07-08T07:17:00.000Z</published>
+    <updated>2025-07-08T03:02:49.882Z</updated>
     
     <content type="html"><![CDATA[<h4 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt;</span><br></pre></td></tr></table></figure><h4 id="初始化本地版本库"><a href="#初始化本地版本库" class="headerlink" title="初始化本地版本库"></a>初始化本地版本库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><h4 id="添加远程仓库地址"><a href="#添加远程仓库地址" class="headerlink" title="添加远程仓库地址"></a>添加远程仓库地址</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;远程地址&gt;</span><br></pre></td></tr></table></figure><h4 id="查看远程仓库地址"><a href="#查看远程仓库地址" class="headerlink" title="查看远程仓库地址"></a>查看远程仓库地址</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure><h4 id="暂存"><a href="#暂存" class="headerlink" title="暂存"></a>暂存</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 暂存所有改动过的文件</span><br><span class="line">git add .</span><br><span class="line">// 查看指定的文件</span><br><span class="line">git add &lt;文件名&gt;</span><br></pre></td></tr></table></figure><h4 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交信息&quot;</span></span><br></pre></td></tr></table></figure><h4 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -33,7 +33,7 @@
     
     
     
-    <category term="全新体验" scheme="https://krt.moe/categories/%E5%85%A8%E6%96%B0%E4%BD%93%E9%AA%8C/"/>
+    <category term="工具使用" scheme="https://krt.moe/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
     
     <category term="git" scheme="https://krt.moe/tags/git/"/>
