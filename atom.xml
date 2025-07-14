@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小七博客</title>
+  
+  <subtitle>一个可爱而现代的 Hexo 主题</subtitle>
+  <link href="https://krt.moe/atom.xml" rel="self"/>
+  
+  <link href="https://krt.moe/"/>
+  <updated>2025-07-14T03:14:33.243Z</updated>
+  <id>https://krt.moe/</id>
+  
+  <author>
+    <name>小七</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>svg转icon依赖使用.md</title>
+    <link href="https://krt.moe/posts/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/svg%E8%BD%ACicon%E4%BE%9D%E8%B5%96/"/>
+    <id>https://krt.moe/posts/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/svg%E8%BD%ACicon%E4%BE%9D%E8%B5%96/</id>
+    <published>2025-07-14T02:31:10.000Z</published>
+    <updated>2025-07-14T03:14:33.243Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="依赖名称"><a href="#依赖名称" class="headerlink" title="依赖名称"></a>依赖名称</h2><p>webpack-iconfont-plugin-nodejs</p><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-iconfont-plugin-nodejs --save-dev</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var WebpackIconfontPluginNodejs = require(&#x27;webpack-iconfont-plugin-nodejs&#x27;);</span><br><span class="line">var path = require(&#x27;path&#x27;);</span><br><span class="line">var dir = &#x27;test/web_project/&#x27;</span><br><span class="line">var options = &#123;</span><br><span class="line">  fontName: &#x27;my-icons&#x27;,</span><br><span class="line">  cssPrefix: &#x27;ico&#x27;,</span><br><span class="line">  svgs: path.join(dir, &#x27;svgs/*.svg&#x27;),</span><br><span class="line">  // template: path.join(dir, &#x27;css.njk&#x27;),</span><br><span class="line">  // htmlTemplate: path.join(dir, &#x27;html.njk&#x27;),</span><br><span class="line">  fontsOutput: path.join(dir, &#x27;fonts/&#x27;),</span><br><span class="line">  cssOutput: path.join(dir, &#x27;fonts/font.css&#x27;),</span><br><span class="line">  htmlOutput: path.join(dir, &#x27;fonts/_font-preview.html&#x27;),</span><br><span class="line">  jsOutput: path.join(dir, &#x27;fonts/fonts.js&#x27;),</span><br><span class="line">  // formats: [&#x27;ttf&#x27;, &#x27;woff&#x27;, &#x27;svg&#x27;],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">new WebpackIconfontPluginNodejs(options).build()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;依赖名称&quot;&gt;&lt;a href=&quot;#依赖名称&quot; class=&quot;headerlink&quot; title=&quot;依赖名称&quot;&gt;&lt;/a&gt;依赖名称&lt;/h2&gt;&lt;p&gt;webpack-iconfont-plugin-nodejs&lt;/p&gt;
+&lt;h2 id=&quot;安装依赖&quot;&gt;&lt;a href=&quot;#安装依</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://krt.moe/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="常用依赖" scheme="https://krt.moe/categories/%E5%89%8D%E7%AB%AF/%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git常用命令</title>
+    <link href="https://krt.moe/posts/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/git%E5%91%BD%E4%BB%A4/"/>
+    <id>https://krt.moe/posts/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/git%E5%91%BD%E4%BB%A4/</id>
+    <published>2025-07-08T07:17:00.000Z</published>
+    <updated>2025-07-14T03:15:29.308Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt;</span><br></pre></td></tr></table></figure><h4 id="初始化本地版本库"><a href="#初始化本地版本库" class="headerlink" title="初始化本地版本库"></a>初始化本地版本库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><h4 id="添加远程仓库地址"><a href="#添加远程仓库地址" class="headerlink" title="添加远程仓库地址"></a>添加远程仓库地址</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;远程地址&gt;</span><br></pre></td></tr></table></figure><h4 id="查看远程仓库地址"><a href="#查看远程仓库地址" class="headerlink" title="查看远程仓库地址"></a>查看远程仓库地址</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure><h4 id="暂存"><a href="#暂存" class="headerlink" title="暂存"></a>暂存</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 暂存所有改动过的文件</span><br><span class="line">git add .</span><br><span class="line">// 查看指定的文件</span><br><span class="line">git add &lt;文件名&gt;</span><br></pre></td></tr></table></figure><h4 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交信息&quot;</span></span><br></pre></td></tr></table></figure><h4 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;克隆&quot;&gt;&lt;a href=&quot;#克隆&quot; class=&quot;headerlink&quot; title=&quot;克隆&quot;&gt;&lt;/a&gt;克隆&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://krt.moe/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="工具使用" scheme="https://krt.moe/categories/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="git" scheme="https://krt.moe/tags/git/"/>
+    
+  </entry>
+  
+</feed>
